@@ -1,0 +1,155 @@
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  background-color: var(--bg-color, #121212);
+  color: var(--text-color, #ffffff);
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-color, #ffffff); /* Ensure text is visible in all modes */
+}
+
+.highlight {
+  color: #64ffda; /* Keep this color fixed for visibility */
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--secondary-color, #a8b2d1);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background-color: #64ffda;
+  color: #0a192f;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(100, 255, 218, 0.2);
+}
+
+.btn.secondary {
+  background-color: transparent;
+  color: #64ffda;
+  border: 1px solid #64ffda;
+}
+
+.btn.secondary:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+.hero-image {
+  flex: 0 0 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  border: 3px solid #64ffda;
+  box-shadow: 0 0 25px #64ffda;
+  animation: glow 3s infinite alternate;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 15px #64ffda;
+  }
+  to {
+    box-shadow: 0 0 30px #64ffda, 0 0 45px rgba(100, 255, 218, 0.5);
+  }
+}
+
+/* Typing effect styles */
+.typing-container {
+  display: inline-block;
+  position: relative;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  animation: blink 0.75s step-end infinite;
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Fade-in animation for elements after typing completes */
+.role-text, .hero-buttons {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .hero-text {
+    margin-bottom: 2rem;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+  }
+  
+  .hero-image {
+    margin-top: 2rem;
+  }
+  
+  .image-container {
+    width: 250px;
+    height: 250px;
+  }
+}

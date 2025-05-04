@@ -1,0 +1,60 @@
+/* Theme variables - from theme.css */
+:root {
+  --primary-color: #007bff;
+  --bg-color: #fff;
+  --text-color: #000;
+  
+  /* Additional variables for more comprehensive theming */
+  --secondary-color: #6c757d;
+  --accent-color: #64ffda;
+  --bg-secondary: #f8f9fa;
+  --nav-bg: #ffffff;
+  --nav-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  --border-color: #e5e5e5;
+}
+
+[data-theme='dark'] {
+  --bg-color: #121212;
+  --text-color: #fff;
+  
+  /* Additional variables for dark theme */
+  --secondary-color: #aaaaaa;
+  --bg-secondary: #1e1e1e;
+  --nav-bg: #1a1a1a;
+  --nav-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  --border-color: #333333;
+}
+
+/* Global styles - from global.css */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Basic element styling with theme variables */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+p, span {
+  color: var(--secondary-color);
+  transition: color 0.3s ease;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Add smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* You can add any other global styles here */
