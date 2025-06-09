@@ -8,7 +8,7 @@ const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isWaiting, setIsWaiting] = useState(false);
   
-  const titles = ["Ranumi Perera", "UI/UX Designer", "QA Engineer", "Project Manager"];
+  const titles = ["Ranumi Perera", "UI/UX Designer", "QA Engineer", "Project"];
   const typingSpeed = 150; // milliseconds per character
   const deletingSpeed = 50; // faster deletion
   const delayTime = 2000; // pause when a word is fully typed
@@ -70,7 +70,7 @@ const Hero = () => {
             </span>
           </h1>
           <p className="role-text fade-in">
-            Full Stack Developer | AI Enthusiast | Cloud Computing
+            UI/UX Designer | QA Engineer | Project Manager
           </p>
           <div className="hero-buttons fade-in">
             <a href="/resume.pdf" className="btn">Download Resume</a>

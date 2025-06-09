@@ -1,5 +1,10 @@
 import React, { useEffect } from 'react';
 import './Projects.css';
+import cupcakeVideo from '../assets/WebPage Redesign.mp4';
+import coffee from '../assets/Coffee.mp4';
+import SaaS from '../assets/SaaS.mp4';
+import Framer from '../assets/Framer.mp4';
+
 
 // Animation observer for scroll effects
 const useScrollAnimation = () => {
@@ -23,67 +28,42 @@ const useScrollAnimation = () => {
 
 const projects = [
   {
-    title: "MindBridge Mobile Application",
-    status: "ongoing",
-    description: "A 24/7 AI-powered mental health support app with an AI chatbot for real-time assistance. Features include anonymous support, mood tracking, crisis intervention, and a secure community platform to enhance user well-being.",
-    tech: "Dart, Node.js",
-    image: "https://via.placeholder.com/600x400?text=MindBridge+App",
-    link: "https://github.com"
-  },
-  {
-    title: "Estate Agent Web Application",
+    title: "Coffee Subscription Service Landing Page",
     year: "2025",
-    description: "Developed a web application that enabled users to search properties from a JSON file with a user-friendly and accessible interface.",
-    tech: "React JS, HTML 5",
-    image: "https://via.placeholder.com/600x400?text=Estate+Agent+App",
-    link: "https://github.com"
-  },
-  {
-    title: "Portfolio Website",
-    year: "2025",
-    description: "A personal portfolio website showcasing projects and skills with modern design principles and responsive layout.",
-    tech: "HTML, CSS",
-    image: "https://via.placeholder.com/600x400?text=Portfolio+Website",
-    link: "https://github.com"
-  },
-  {
-    title: "Green Steps Mobile Application UI",
-    year: "2024",
-    description: "Designed UI layouts and mockups for an eco-friendly app that promotes sustainable habits, focusing on user experience and visual appeal.",
+    description: "A fully responsive landing page designed for a coffee subscription service, focusing on user experience and visual branding.",
     tech: "Figma",
-    image: "https://via.placeholder.com/600x400?text=Green+Steps+UI",
+    video: coffee, // Replace with your own video link
     link: "https://github.com"
   },
   {
-    title: "Real-time Ticketing System",
-    year: "2024",
-    description: "Built a real-time event ticketing system for seamless event booking and management with both a command-line interface and a graphical user interface.",
-    tech: "Java, Node.js, React",
-    image: "https://via.placeholder.com/600x400?text=Ticketing+System",
+    title: "Cupcake Shop Landing Page",
+    year: "2025",
+    description: "A sweet and visually appealing responsive landing page for a cupcake shop, designed with attention to mobile-friendly layouts and customer conversion.",
+    tech: "Figma",
+    video: cupcakeVideo, // Replace with your own video link
     link: "https://github.com"
   },
   {
-    title: "Personal Finance Tracker",
-    year: "2024",
-    description: "A Python app for tracking expenses and income with a Tkinter interface, built using OOP principles for easy maintenance.",
-    tech: "Python",
-    image: "https://via.placeholder.com/600x400?text=Finance+Tracker",
+    title: "Hero Section UI in Framer",
+    year: "2025",
+    description: "A responsive hero section design built in Framer, showcasing modern animations and layout for a clean first impression.",
+    tech: "Framer",
+    video: Framer, // Replace with your own video link
     link: "https://github.com"
   },
   {
-    title: "Student Management System",
-    year: "2024",
-    description: "A Java software for managing student data with smooth file handling using Java I/O libraries.",
-    tech: "Java",
-    image: "https://via.placeholder.com/600x400?text=Student+Management",
+    title: "SaaS Product Landing Page",
+    year: "2025",
+    description: "A modern, responsive landing page for a fictional SaaS product, designed using Figma and prototyped in Framer.",
+    tech: "Figma, Framer",
+    video: SaaS, // Replace with your own video link
     link: "https://github.com"
   }
 ];
 
 const Projects = () => {
-  // Initialize scroll animations
   useScrollAnimation();
-  
+
   return (
     <section id="projects" className="projects">
       <div className="projects-container">
@@ -99,8 +79,15 @@ const Projects = () => {
         <div className="project-grid">
           {projects.map((project, index) => (
             <div key={index} className="project-card">
-              <div className="project-image">
-                <img src={project.image} alt={project.title} />
+              <div className="project-video">
+                <video 
+                  src={project.video} 
+                  controls 
+                  muted 
+                  playsInline 
+                  preload="metadata"
+                  style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+                />
                 <div className="project-overlay">
                   <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
                     View Project
@@ -110,7 +97,6 @@ const Projects = () => {
               <div className="project-info">
                 <div className="project-header">
                   <h3>{project.title}</h3>
-                  {project.status && <span className="project-status">{project.status}</span>}
                   {project.year && <span className="project-year">{project.year}</span>}
                 </div>
                 <p className="project-description">{project.description}</p>
