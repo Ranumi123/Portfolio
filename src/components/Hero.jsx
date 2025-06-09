@@ -8,7 +8,7 @@ const Hero = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isWaiting, setIsWaiting] = useState(false);
   
-  const titles = ["Ranumi Perera", "a Developer", "an AI Enthusiast", "a Cloud Expert"];
+  const titles = ["Ranumi Perera", "UI/UX Designer", "QA Engineer", "Project Manager"];
   const typingSpeed = 150; // milliseconds per character
   const deletingSpeed = 50; // faster deletion
   const delayTime = 2000; // pause when a word is fully typed
