@@ -33,7 +33,7 @@ const projects = [
     description: "A fully responsive landing page designed for a coffee subscription service, focusing on user experience and visual branding.",
     tech: "Figma",
     video: coffee, // Replace with your own video link
-    link: "https://github.com"
+    link: "https://www.figma.com/design/CJryaOImw6fsT2COBTg8UU/Module-2?node-id=0-1&t=6k5Xon43bF8H7WBD-1"
   },
   {
     title: "Cupcake Shop Landing Page",
@@ -41,15 +41,7 @@ const projects = [
     description: "A sweet and visually appealing responsive landing page for a cupcake shop, designed with attention to mobile-friendly layouts and customer conversion.",
     tech: "Figma",
     video: cupcakeVideo, // Replace with your own video link
-    link: "https://github.com"
-  },
-  {
-    title: "Hero Section UI in Framer",
-    year: "2025",
-    description: "A responsive hero section design built in Framer, showcasing modern animations and layout for a clean first impression.",
-    tech: "Framer",
-    video: Framer, // Replace with your own video link
-    link: "https://github.com"
+    link: "https://www.figma.com/design/7NiMqiJJlmg21uXmN6D9kL/Untitled?node-id=0-1&t=u5eZggwJB7vMD3Nu-1"
   },
   {
     title: "SaaS Product Landing Page",
@@ -57,7 +49,15 @@ const projects = [
     description: "A modern, responsive landing page for a fictional SaaS product, designed using Figma and prototyped in Framer.",
     tech: "Figma, Framer",
     video: SaaS, // Replace with your own video link
-    link: "https://github.com"
+    link: "https://www.figma.com/design/5uE9qY7trgmBNY6e9JiKGk/Final-Assessment?node-id=1-2&t=Dvbcf5KqRfNuISHy-1"
+  },
+  {
+    title: "Hero Section UI in Framer",
+    year: "2025",
+    description: "A responsive hero section design built in Framer, showcasing modern animations and layout for a clean first impression.",
+    tech: "Framer",
+    video: Framer, // Replace with your own video link
+    link: "https://framer.com/projects/Module-3--IYHIDbX798uTmaX5wt18-VrlPv"
   }
 ];
 
