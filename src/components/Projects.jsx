@@ -81,14 +81,14 @@ const Projects = () => {
             <div key={index} className="project-card">
               <div className="project-video">
                 <video 
-                  src={project.video}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="auto"
-                  style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
-                />
+                src={project.video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                preload="auto"
+                style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+              />
                 <div className="project-overlay">
                   <a href={project.link} target="_blank" rel="noopener noreferrer" className="project-link">
                     View Project
