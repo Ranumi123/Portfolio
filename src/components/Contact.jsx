@@ -71,7 +71,7 @@ const Contact = () => {
             <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
               <FaGithub size={22} />
             </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+            <a href="https://www.linkedin.com/in/ranumi-perera-35a462291/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
               <FaLinkedin size={22} />
             </a>
             <a href="mailto:your@email.com" aria-label="Email Me">

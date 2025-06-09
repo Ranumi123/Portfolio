@@ -81,11 +81,12 @@ const Projects = () => {
             <div key={index} className="project-card">
               <div className="project-video">
                 <video 
-                  src={project.video} 
-                  controls 
-                  muted 
-                  playsInline 
-                  preload="metadata"
+                  src={project.video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
                   style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
                 />
                 <div className="project-overlay">
