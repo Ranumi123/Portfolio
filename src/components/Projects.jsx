@@ -3,8 +3,8 @@ import './Projects.css';
 import cupcakeVideo from '../assets/WebPage Redesign.mp4';
 import coffee from '../assets/Coffee.mp4';
 import SaaS from '../assets/SaaS.mp4';
-import Framer from '../assets/Framer.mp4';
 import Marketing from '../assets/MindBridge Marketing Website.mp4';
+import Oceanauts from '../assets/Oceanauts.mp4';
 
 const useScrollAnimation = () => {
   useEffect(() => {
@@ -59,11 +59,11 @@ const projects = [
     link: "https://www.figma.com/design/5uE9qY7trgmBNY6e9JiKGk/Final-Assessment?node-id=1-2&t=Dvbcf5KqRfNuISHy-1"
   },
   {
-    title: "Hero Section UI in Framer",
-    year: "2025",
-    description: "A responsive hero section design built in Framer, showcasing modern animations and layout for a clean first impression.",
-    tech: "Framer",
-    video: Framer,
+    title: "Oceanauts Website",
+    year: "2024",
+    description: "Collaboratively developed a responsive website focused on marine life conservation, aligning with United Nations Sustainable Development Goal 14: Life Below Water. The Oceanuts site features educational content, interactive visuals, and resources to raise awareness about ocean preservation and sustainable practices.",
+    tech: "HTML, CSS, JavaScript",
+    video: Oceanauts,
     link: "https://framer.com/projects/Module-3--IYHIDbX798uTmaX5wt18-VrlPv"
   }
 ];
