@@ -4,6 +4,7 @@ import cupcakeVideo from '../assets/WebPage Redesign.mp4';
 import coffee from '../assets/Coffee.mp4';
 import SaaS from '../assets/SaaS.mp4';
 import Framer from '../assets/Framer.mp4';
+import Marketing from '../assets/MindBridge Marketing Website.mp4';
 
 const useScrollAnimation = () => {
   useEffect(() => {
@@ -25,6 +26,14 @@ const useScrollAnimation = () => {
 };
 
 const projects = [
+  {
+    title: "MindBridge Marketing Website",
+    year: "2025",
+    description: "A responsive and accessible marketing website developed for the MindBridge mental health app using React. The site highlights core features like mood tracking, community support, and crisis alerts, with a modern UI, smooth navigation, and mobile-first design.",
+    tech: "React",
+    video: Marketing,
+    link: "https://mindbridge.lk/"
+  },
   {
     title: "Coffee Subscription Service Landing Page",
     year: "2025",

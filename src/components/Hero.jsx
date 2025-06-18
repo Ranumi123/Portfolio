@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import './Hero.css';
+import ResumePDF from '../assets/Ranumi Perera.pdf';
 
 const Hero = () => {
   const [text, setText] = useState("");
@@ -61,7 +62,9 @@ const Hero = () => {
             UI/UX Designer | QA Engineer | Project Manager
           </p>
           <div className="hero-buttons fade-in">
-            <a href="/resume.pdf" className="btn">Download Resume</a>
+            <a href={ResumePDF} className="btn" target="_blank" rel="noopener noreferrer">
+              Download Resume
+            </a>
             <a href="#projects" className="btn secondary">View Projects</a>
           </div>
         </div>
