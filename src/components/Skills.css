@@ -1,4 +1,3 @@
-/* Skills.css */
 #skills {
   padding: 6rem 5%;
   background-color: var(--bg-color, #121212);
@@ -17,7 +16,6 @@
 
 .section-header {
   margin-bottom: 4rem;
-  position: relative;
   text-align: center;
 }
 
@@ -33,33 +31,23 @@
 #skills h2 {
   font-size: 2.8rem;
   margin-bottom: 1rem;
-  position: relative;
   display: inline-block;
 }
 
 .header-line {
   width: 120px;
   height: 4px;
-  background-color: #64ffda;
+  background-color: #ccc;
   margin: 1rem auto;
-  position: relative;
 }
 
 .header-line:before {
-  content: '';
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  background-color: #64ffda;
-  border-radius: 50%;
-  top: -5px;
-  left: 50%;
-  transform: translateX(-50%);
+  display: none;
 }
 
 .highlight {
-  color: #64ffda;
-  text-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+  color: inherit;
+  text-shadow: none;
 }
 
 .skills-container {
@@ -114,7 +102,6 @@
   font-size: 1.6rem;
   color: var(--secondary-color, #a8b2d1);
   letter-spacing: 0.5px;
-  position: relative;
 }
 
 .skill-category.active h3 {
@@ -194,7 +181,6 @@
   }
 }
 
-/* Pulse glow effect on skill items */
 .skill-category li:hover {
   animation: skillPulse 2s infinite;
 }
@@ -211,7 +197,6 @@
   }
 }
 
-/* Responsive design */
 @media screen and (max-width: 992px) {
   .skills-container {
     grid-template-columns: repeat(2, 1fr);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import './Hero.css';
 
 const Hero = () => {
@@ -7,31 +7,27 @@ const Hero = () => {
   const [displayedText, setDisplayedText] = useState("");
   const [loopNum, setLoopNum] = useState(0);
   const [isWaiting, setIsWaiting] = useState(false);
-  
-  const titles = ["Ranumi Perera", "UI/UX Designer", "QA Engineer", "Project"];
-  const typingSpeed = 150; // milliseconds per character
-  const deletingSpeed = 50; // faster deletion
-  const delayTime = 2000; // pause when a word is fully typed
-  
+
+  // ✅ useMemo to avoid recreating the array every render
+  const titles = useMemo(() => ["Ranumi Perera", "UI/UX Designer", "QA Engineer", "Project"], []);
+
+  const typingSpeed = 150;
+  const deletingSpeed = 50;
+  const delayTime = 2000;
+
   useEffect(() => {
-    // Show text immediately to avoid visibility issues on load
     if (displayedText === "") {
       setDisplayedText("Hi, I'm ");
     }
-    
+
     const handleTyping = () => {
       const i = loopNum % titles.length;
       const fullTitle = titles[i];
-      
-      if (isWaiting) {
-        // If waiting, do nothing until wait time is over
-        return;
-      }
-      
+
+      if (isWaiting) return;
+
       if (!isDeleting) {
         setText(fullTitle.substring(0, text.length + 1));
-        
-        // If we've fully typed the word
         if (text.length === fullTitle.length) {
           setIsWaiting(true);
           setTimeout(() => {
@@ -41,32 +37,24 @@ const Hero = () => {
         }
       } else {
         setText(fullTitle.substring(0, text.length - 1));
-        
-        // If we've fully deleted the word
         if (text.length === 0) {
           setIsDeleting(false);
           setLoopNum(loopNum + 1);
         }
       }
     };
-    
-    // Different speeds for typing and deleting
-    const typingTimer = setTimeout(
-      handleTyping, 
-      isDeleting ? deletingSpeed : typingSpeed
-    );
-    
+
+    const typingTimer = setTimeout(handleTyping, isDeleting ? deletingSpeed : typingSpeed);
     return () => clearTimeout(typingTimer);
-  }, [text, isDeleting, loopNum, titles, isWaiting, displayedText]);
-  
+  }, [text, isDeleting, loopNum, isWaiting, displayedText, titles]);
+
   return (
     <section className="hero">
       <div className="hero-content">
         <div className="hero-text">
           <h1>
             {displayedText}<span className="highlight typing-container">
-              {text}
-              <span className="cursor">|</span>
+              {text}<span className="cursor">|</span>
             </span>
           </h1>
           <p className="role-text fade-in">

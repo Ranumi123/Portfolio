@@ -36,7 +36,6 @@ const skills = [
   }
 ];
 
-// Icons for categories (you can update icons here)
 const categoryIcons = {
   "Programming and Web Development": "💻",
   "Testing Tools": "🧪",
